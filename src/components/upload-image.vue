@@ -149,7 +149,7 @@ export default {
       } ;
       try{
         const url = import.meta.env.MODE === 'development'  ? import.meta.env.VITE_APP_URL_LOCAL : import.meta.env.VITE_APP_URL_PRODUCCION;
-        const { data } = await axios.post(`${url}/rn/reconize_objects`,{
+        const { data } = await axios.post(`${url}rn/reconize_objects`,{
           tag: tag,
           image_data: this.image_str,
         });
