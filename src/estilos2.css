@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+
+
+.btn-open-popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #D90C43;
+    display: block;
+    background: white;
+    padding: 20px 50px;
+    border-radius: 50px;
+}
+
+
+.container2-all2{
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+
+    top: 0;
+	right: 0;
+	
+	
+    position: fixed;
+    padding: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+
+.container2-all2:target{
+    opacity:1;
+	pointer-events: auto;
+
+}
+
+.container2-all2:target .popup{
+    top: 50%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+    position:absolute;
+
+}
+.container2-all2:target .popup2{
+    top: 50%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+    position:absolute;
+
+}
+
+.popup{
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    background: white;
+    visibility: hidden;
+    top: -80%;
+    left: -80%;
+    transform: rotate(90deg) translate(-150%, 230%);
+    transition: all 600ms;
+}
+.popup2{
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    background: white;
+    visibility: hidden;
+    top: -80%;
+    left: -80%;
+    transform: rotate(90deg) translate(-150%, 230%);
+    transition: all 600ms;
+}
+
+
+
+
+.container2-text2{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+
+.container2-text2 h1{
+    font-size: 30px;
+}
+
+.container2-text2 p{
+    
+    font-size: 16px;
+}
+
+
+.btn-close-popup{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 20px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    line-height: 10px;
+}
+
+@media screen and (max-width: 900px){
+    .popup{
+       
+        height: 100%;
+        max-height: 800px;
+    }
+    
+    
+    .popup2{
+       
+        height: 100%;
+        max-height: 800px;
+    }
+    .container-text2{
+        width: 100%;
+        height: 60%;
+        padding: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .container-text2{
+        padding: 10px;
+    }
+    
+    .container-text2 h1{
+        font-size: 20px;
+    }
+    
+    .container-text2 p{
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

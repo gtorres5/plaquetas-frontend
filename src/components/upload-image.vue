@@ -3,8 +3,8 @@
     <div class="px-6 py-1" style="border: solid;
     font-size: 25px;
     font-weight: bold;
-    background-color: #373e46;
-    border-color: #29313b;">
+    background-color: rgb(23 159 230);border-radius: 11px;color: #ffff;
+    ">
       plastado {{id}} | {{ count_items !== null ? 'Total: ' + count_items : ''}}  
       <button 
         style="float: right" 
@@ -38,7 +38,7 @@
       class="images"
       v-viewer
       :class="visibilidad_contenido_plastado ? 'contenido_visible py-5' : 'contenido_invisible'"
-      style="border: solid rgb(41, 49, 59);border-top: #4c5259; transition: .3s all ease-in;"
+      style="border-radius: 10px;box-shadow: 3px 2px 4px 3px rgba(0,0,0,0.2);border-top: #4c5259;margin-bottom: 10px"
     >
       
       <button
