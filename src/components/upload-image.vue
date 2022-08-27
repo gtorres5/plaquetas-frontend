@@ -49,7 +49,7 @@
       </button>
       <img
         v-show="visibilidad_contenido_plastado"
-        src="nada"
+        src=""
         class="rounded-lg mt-5"
         style="width: 20%; display: inline"
         alt=""
@@ -70,7 +70,7 @@
       </button>
       <img
         v-show="visibilidad_contenido_plastado"
-        src="nada"
+        src=""
         class="rounded-lg mt-5 ml-2"
         style="width: 20%; display: inline"
         alt=""
@@ -148,7 +148,8 @@ export default {
         tag = tag.replace('.', '_')
       } ;
       try{
-        const { data } = await axios.post("http://localhost:8000/rn/reconize_objects",{
+        const url = import.meta.env.MODE === 'development'  ? import.meta.env.VITE_APP_URL_LOCAL : import.meta.env.VITE_APP_URL_PRODUCCION;
+        const { data } = await axios.post(`${url}/rn/reconize_objects`,{
           tag: tag,
           image_data: this.image_str,
         });
