@@ -1,73 +1,73 @@
 <template>
   <div>
-    <header>
-      <nav class="main-nav">
-        <input type="checkbox" id="isChecked" v-model="is_checked" />
-        <label for="isChecked" class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <a href="index.html" class="logo">andraware</a>
-        <ul class="navlinks">
-          <li><a href="javascript:void(0)">Services</a></li>
-          <li><a href="javascript:void(0)">Projects</a></li>
-          <li><a href="javascript:void(0)">About</a></li>
-          <li>
-            <a 
-              href="#servicio"
-              @click="is_checked = false;"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <header  style="background-color: #398ffc;">
+ <div class="header-content" >
+         
+            <div class="logo">
+                <h1>Placken</h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="#servicio"> <i class="fas fa-home"></i> Inicio</a></li>
+                       
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
-    <div class="py-20 pl-10" id="informacion" style="background-color: #141b25c2; color: aliceblue">
-      <h1 class="mb-4" style="font-size: 30px">informacion</h1>
+   
+      <div class="container-cover">
+        <div class="container-info-cover">
+            <h1>Importancia del proyecto</h1>
+            <p>Esta investigación servirá para la elaboración de una alternativa de bajo costo para la realización de exámenes que sirven para el diagnóstico del dengue. Tendrá un efecto positivo en la comunidad iquiteña permitiendo al sector médico actuar con prontitud en los casos de dengue</p>
+            
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="py-20 pl-10" id="informacion" style="background-color: #ffff; color: aliceblue; border-radius: 16px;box-shadow: 5px 4px 8px 6px rgba(0,0,0,0.2);padding: 22px 26px;margin-top: 16px;margin-left: 16px;margin-right: 16px;margin-bottom: 16px">
+    <h1 class="mb-4" style="font-size: 30px; color:#6EC1E4;font-weight: bolder;
+">Objetivos del proyecto</h1>
       <div style="padding: 12px;
     margin-right: 12px;
-    background-color: #141b255e;
-    border: solid;
-    border-color: #141b255e;
-    border-radius: 12px;">
-      esta pagina hace snoawndos ciosdbfiew cobc cviowebfw cowebf weocew ufewov weufweof we9uf we
-      cniofwe cweb vwecouew v wevouew uov w ic ewouc eo cuis cse fcowuvfcw
-      foe fywe cowe cue ciua icv seiof we
-      c erio ciwe cweu cwe <br>
-      +rewfg+ér,.g+ér,g´+er,h,+rtongmrenilrenfoen
-      <br>
-      +rewfg+ér,.g+ér,g´+er,h,+rtongmrenilrenfoen<br>
-      +rewfg+ér,.g+ér,g´+er,h,+rtongmrenilrenfoen<br>
-      +rewfg+ér,.g+ér,g´+er,h,+rtongmrenilrenfoen<br>
-      +rewfg+ér,.g+ér,g´+er,h,+rtongmrenilrenfoen
+   color:#2b718f; ">
+      Esta investigación servirá para la elaboración de una alternativa de bajo costo para la realización de exámenes que sirven para el diagnóstico del dengue.
+Tendrá un efecto positivo en la comunidad iquiteña permitiendo al sector médico actuar con prontitud en los casos de dengue.
+Esta investigación fomentará el uso de tecnologías basadas en visión computacional para el apoyo al área médica.
+
+   
       </div>
     </div>
     <hr>
-    <div class="py-20 pl-10" id="acerca_de" style="background-color: #141b25c2; color: aliceblue">
-      <h1 class="mb-4" style="font-size: 30px">acerca de</h1>
-      <div>
-      esta pagina hace snoawndos ciosdbfiew cobc cviowebfw cowebf weocew ufewov weufweof we9uf we
-      cniofwe cweb vwecouew v wevouew uov w ic ewouc eo cuis cse fcowuvfcw
-      foe fywe cowe cue ciua icv seiof we
-      c erio
-      </div>
-    </div>
-    <hr>
-    <div id="servicio" name="servicio" style="background-color: #141b25c2; color: aliceblue">
+    <div id="servicio" name="servicio" style="background-color: #ffff; color: #6EC1E4; border-radius: 16px;box-shadow: 5px 4px 8px 6px rgba(0,0,0,0.2);padding: 22px 26px;margin-top: 16px;margin-left: 16px;margin-right: 16px;margin-bottom: 16px">
       <div class="m-5 mt-1 pt-5">
-        <h1 class="text-2xl mb-4">Servicio de conteo de plaquetas</h1>
+        <h1 class="mb-4" style="font-size: 30px; color:rgb(2 2 13);font-weight: bolder;
+">Servicio de conteo de plaquetas</h1>
         <div class="mb-4">
           <h1 class="text-2xl mr-2" style="display: inline">campos: {{numero_de_campos}}</h1> 
           <button 
             class="py-1 px-3 bg-green-500 text-white focus:outline-none mx-1"
-            style="border-radius: 6px"
+            style="border-radius: 16px"
             @click="numero_de_campos++"
           >
             +
           </button>
           <button 
             class="py-1 px-3 bg-green-500 text-white focus:outline-none mx-1" 
-            style="border-radius: 6px"
+            style="border-radius: 3px"
             @click="delete_campo" 
             v-if="numero_de_campos > 5"
           >
@@ -97,76 +97,10 @@
         {{conteo_total}} plt/mml
       </div>
     </div>
-    <div>
-      <h1>Configuraciones</h1>
-      <label for="chk_busqueda_atomatica"> busqueda atomatica </label>
-      <input type="checkbox" id="chk_busqueda_atomatica" v-model="configuraciones.busqueda_automatica">
-      <pre>
-        {{configuraciones}}
-      </pre>
-      <br>
-    </div>
+   
     <div class="col-md-4">
-<div class="col-md-6">
-     <h4>Radio Buttons</h4>
 
-    <div class="funkyradio">
-        <div class="funkyradio-default">
-            <input type="radio" name="radio" id="radio1" />
-            <label for="radio1">First Option default</label>
-        </div>
-        <div class="funkyradio-primary">
-            <input type="radio" name="radio" id="radio2" checked/>
-            <label for="radio2">Second Option primary</label>
-        </div>
-        <div class="funkyradio-success">
-            <input type="radio" name="radio" id="radio3" />
-            <label for="radio3">Third Option success</label>
-        </div>
-        <div class="funkyradio-danger">
-            <input type="radio" name="radio" id="radio4" />
-            <label for="radio4">Fourth Option danger</label>
-        </div>
-        <div class="funkyradio-warning">
-            <input type="radio" name="radio" id="radio5" />
-            <label for="radio5">Fifth Option warning</label>
-        </div>
-        <div class="funkyradio-info">
-            <input type="radio" name="radio" id="radio6" />
-            <label for="radio6">Sixth Option info</label>
-        </div>
-    </div>
-</div>
-<div class="col-md-6">
-     <h4>Checkbox Buttons</h4>
 
-    <div class="funkyradio">
-        <div class="funkyradio-default">
-            <input type="checkbox" name="checkbox" id="checkbox1" checked/>
-            <label for="checkbox1">First Option default</label>
-        </div>
-        <div class="funkyradio-primary">
-            <input type="checkbox" name="checkbox" id="checkbox2" checked/>
-            <label for="checkbox2">Second Option primary</label>
-        </div>
-        <div class="funkyradio-success">
-            <input type="checkbox" name="checkbox" id="checkbox3" checked/>
-            <label for="checkbox3">Third Option success</label>
-        </div>
-        <div class="funkyradio-danger">
-            <input type="checkbox" name="checkbox" id="checkbox4" checked/>
-            <label for="checkbox4">Fourth Option danger</label>
-        </div>
-        <div class="funkyradio-warning">
-            <input type="checkbox" name="checkbox" id="checkbox5" checked/>
-            <label for="checkbox5">Fifth Option warning</label>
-        </div>
-        <div class="funkyradio-info">
-            <input type="checkbox" name="checkbox" id="checkbox6" checked/>
-            <label for="checkbox6">Sixth Option info</label>
-        </div>
-    </div>
-</div>
 </div>
   </div>
 </template>
