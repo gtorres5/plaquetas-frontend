@@ -117,7 +117,7 @@ export default {
       numero_de_campos: 10,
       campos_encontrados: 0,
       configuraciones: {
-        busqueda_automatica: false,
+        busqueda_automatica: true,
         habilitar_cambio_cantidad_campos: true,
         seleccion_multiple: true,
         saltar: false,  //cuando existe seleccion multiple, busca los campos libres
